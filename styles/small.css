@@ -183,3 +183,39 @@ h1 {
     background-color: var(--color-backgrouds);
     color: black;
 }
+
+.courses {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.course {
+    background-color: var(--color-backgrouds);
+    color: var(--color-primary);
+    border: var(--color-primary) 1px solid;
+    text-align: center;
+    flex: 1;
+    padding: .5rem 2rem;
+    margin: .5rem 1rem .5rem 1rem;
+}
+
+.active-course {
+    background-color: var(--color-emphasis);
+    color: black;
+    border: var(--color-primary) 1px solid;
+}
+
+footer {
+    background-color: var(--color-backgrouds);
+    padding: 1rem;
+}
+
+footer p,
+footer p span {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: var(--color-primary);
+    font-size: small;
+}

@@ -32,4 +32,9 @@
     .card-left {
         margin-right: 1rem;
     }
+
+    .courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
