@@ -24,3 +24,35 @@ navigation.addEventListener('click', function (e) {
     });
     clickedElement.classList.toggle('active');
 })
+
+const select_all = document.querySelector('#btn-all');
+const all_courses = document.querySelectorAll('.course');
+select_all.addEventListener('click', () => {
+    all_courses.forEach(element => {
+        element.classList.toggle('active-course');
+    })
+});
+
+const select_cse = document.querySelector('#btn-cse');
+const cse_courses = document.querySelectorAll('.cse');
+select_cse.addEventListener('click', () => {
+    all_courses.forEach(element => {
+        element.classList.remove('active-course');
+    })
+    cse_courses.forEach(element => {
+        element.classList.toggle('active-course');
+    })
+});
+
+const select_wdd = document.querySelector('#btn-wdd');
+const wdd_courses = document.querySelectorAll('.wdd');
+select_wdd.addEventListener('click', () => {
+    all_courses.forEach(element => {
+        element.classList.remove('active-course');
+    })
+    wdd_courses.forEach(element => {
+        element.classList.toggle('active-course');
+    })
+});
+
+
