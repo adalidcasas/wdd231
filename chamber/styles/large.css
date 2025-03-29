@@ -1,0 +1,28 @@
+@media (min-width: 40em) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    .title {
+        width: 40%;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        margin: 0 auto;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+}

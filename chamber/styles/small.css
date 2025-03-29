@@ -1,0 +1,103 @@
+:root {
+    /* CSS HEX */
+    --color-primary: #30478C;
+    --color-secondary: #939EBF;
+    --color-backgrouds: #F2F2F2;
+    --color-emphasis: #F2811D;
+    --color-others: #F2B988;
+    --color-white: #fff;
+
+    --width: 900px;
+}
+
+* {
+    margin: 0 auto;
+    max-width: var(--width);
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Courier, monospace;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+header {
+    background-color: var(--color-backgrouds);
+    padding: 0.5rem;
+}
+
+.title {
+    display: flex;
+    background-color: var(--color-backgrouds);
+}
+
+.title img {
+    max-width: 125px;
+    height: auto;
+    margin: 0;
+}
+
+.title-description {
+    margin: auto 0 1rem;
+    background-color: var(--color-backgrouds);
+}
+
+.title-description span {
+    font-weight: 750;
+    font-size: xx-large;
+    background-color: var(--color-backgrouds);
+}
+
+.title-description p {
+    font-size: medium;
+    background-color: var(--color-backgrouds);
+}
+
+.navigation {
+    background-color: var(--color-backgrouds);
+    display: block;
+    align-items: flex-end;
+}
+
+.navigation a {
+    color: var(--color-primary);
+    display: none;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    flex: 1;
+    padding: .5rem 1rem;
+    margin: 0 2px 0 2px;
+    font-weight: var(--font-bold);
+}
+
+.navigation a.active {
+    text-decoration: underline;
+}
+
+.navigation a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+#menu {
+    border: 0;
+    background: var(--color-backgrouds);
+    color: var(--color-primary);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.open a {
+    display: block;
+}
