@@ -1,5 +1,7 @@
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
+const this_year = document.querySelector("#currentyear");
+const last_modified = document.querySelector("#lastModified");
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
@@ -14,3 +16,9 @@ navigation.addEventListener('click', function (e) {
     });
     clickedElement.classList.toggle('active');
 })
+
+let today = new Date();
+let last_date = new Date(document.lastModified);
+
+this_year.innerHTML = today.getFullYear();
+last_modified.innerHTML = `Last Modified:  <span class="highlight">${last_date}</span>`;

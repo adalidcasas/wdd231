@@ -1,5 +1,6 @@
 @media (min-width: 40em) {
 
+    /*header*/
     header {
         display: flex;
         justify-content: space-between;
@@ -7,7 +8,6 @@
 
     #menu {
         display: none;
-        /* hide hamburger button */
     }
 
     .title {
@@ -25,4 +25,21 @@
         display: block;
         flex: 1 1 100%;
     }
+
+    /*header end*/
+
+
+    /*footer*/
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 100%;
+    }
+
+    .footer-contact-info,
+    .footer-author-info {
+        display: block;
+    }
+
+    /*footer end*/
 }
