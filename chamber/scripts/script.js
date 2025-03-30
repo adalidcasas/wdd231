@@ -24,7 +24,7 @@ this_year.innerHTML = today.getFullYear();
 last_modified.innerHTML = `Last Modified:  <span class="highlight">${last_date}</span>`;
 
 
-const cards = document.querySelector('#cards');
+const cards = document.querySelector('#gallery-cards');
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
