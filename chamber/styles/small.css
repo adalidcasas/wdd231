@@ -99,6 +99,23 @@ header {
 
 /*Header end*/
 
+/*Directory*/
+.gallery-card {
+    border: 1px solid var(--color-secondary);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.grid section {
+    text-align: center;
+}
+
+/*Directory end*/
 
 /*footer*/
 

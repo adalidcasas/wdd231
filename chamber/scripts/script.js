@@ -24,7 +24,7 @@ this_year.innerHTML = today.getFullYear();
 last_modified.innerHTML = `Last Modified:  <span class="highlight">${last_date}</span>`;
 
 
-//const members = 'members.json';
+const cards = document.querySelector('#cards');
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
@@ -36,13 +36,28 @@ const displayMembers = (members) => {
         let mlevel = document.createElement('p');
         let slogan = document.createElement('p');
 
-        logo.setAttribute('src', member.imageurl);
+        card.className = 'gallery-card';
+        name.textContent = `${member.name}`;
+        address.textContent = `${member.address}`;
+        phone.textContent = `${member.phone_number}`;
+        website.textContent = `${member.website_url}`;
+        mlevel.textContent = `${member.membership_level}`;
+        slogan.textContent = `${member.slogan}`;
+
+        logo.setAttribute('src', member.image_file);
         logo.setAttribute('alt', `logo of ${member.name}`);
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '340');
         logo.setAttribute('height', '440');
 
+        card.appendChild(name);
+        card.appendChild(slogan);
+        card.appendChild(logo);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
 
+        cards.appendChild(card);
     })
 }
 
@@ -50,5 +65,6 @@ async function getMembersData() {
     const response = await fetch('members.json');
     const data = await response.json();
     console.table(data.members);
+    displayMembers(data.members);
 }
 getMembersData()

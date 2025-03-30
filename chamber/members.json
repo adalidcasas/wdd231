@@ -1,67 +1,67 @@
 {
     "members": [
         {
-            "name": "John Doe",
-            "address": "123 Elm Street, Springfield, IL",
-            "phone_number": "+1 555-1234",
-            "website_url": "https://johndoe.com",
-            "image_file": "johndoe.jpg",
+            "name": "Tech Innovations",
+            "address": "Avenida Ballivián 123, La Paz, Bolivia",
+            "phone_number": "+591 2 2456789",
+            "website_url": "https://techinnovations.com",
+            "image_file": "techinnovations.jpg",
             "membership_level": 1,
-            "slogan": "Just Do It"
+            "slogan": "Innovando el Futuro"
         },
         {
-            "name": "Jane Smith",
-            "address": "456 Oak Avenue, Boston, MA",
-            "phone_number": "+1 555-5678",
-            "website_url": "https://janesmith.com",
-            "image_file": "janesmith.jpg",
+            "name": "Soluciones Verdes",
+            "address": "Calle 21 de Mayo 456, La Paz, Bolivia",
+            "phone_number": "+591 2 3356789",
+            "website_url": "https://solucionesverdes.org",
+            "image_file": "solucionesverdes.jpg",
             "membership_level": 2,
-            "slogan": "Excellence in Every Step"
+            "slogan": "Prácticas Sostenibles para un Mañana Mejor"
         },
         {
-            "name": "Bob Johnson",
-            "address": "789 Pine Road, Chicago, IL",
-            "phone_number": "+1 555-8765",
-            "website_url": "https://bobjohnson.com",
-            "image_file": "bobjohnson.jpg",
+            "name": "Bolivia Innovadora",
+            "address": "Avenida Arce 789, La Paz, Bolivia",
+            "phone_number": "+591 2 1256789",
+            "website_url": "https://boliviainnovadora.org",
+            "image_file": "boliviainnovadora.jpg",
             "membership_level": 3,
-            "slogan": "Pioneering Innovation"
+            "slogan": "Impulsando el Futuro de Bolivia"
         },
         {
-            "name": "Alice Brown",
-            "address": "101 Maple Street, New York, NY",
-            "phone_number": "+1 555-4321",
-            "website_url": "https://alicebrown.com",
-            "image_file": "alicebrown.jpg",
+            "name": "Estudio Diseño Urbano",
+            "address": "Calle Comercio 101, La Paz, Bolivia",
+            "phone_number": "+591 2 4456789",
+            "website_url": "https://disenourbano.com",
+            "image_file": "disenourbano.jpg",
             "membership_level": 2,
-            "slogan": "A Better Tomorrow"
+            "slogan": "Diseñando el Futuro Urbano"
         },
         {
-            "name": "Charlie Davis",
-            "address": "202 Birch Lane, San Francisco, CA",
-            "phone_number": "+1 555-6789",
-            "website_url": "https://charliedavis.com",
-            "image_file": "charliedavis.jpg",
+            "name": "Manufacturas Avanzadas S.A.",
+            "address": "Avenida 6 de Agosto 202, La Paz, Bolivia",
+            "phone_number": "+591 2 5567890",
+            "website_url": "https://manufacturasavanzadas.com",
+            "image_file": "manufacturasavanzadas.jpg",
             "membership_level": 1,
-            "slogan": "Shaping the Future"
+            "slogan": "Excelencia en Ingeniería"
         },
         {
-            "name": "Emily Wilson",
-            "address": "303 Cedar Street, Los Angeles, CA",
-            "phone_number": "+1 555-9876",
-            "website_url": "https://emilywilson.com",
-            "image_file": "emilywilson.jpg",
+            "name": "Skyline Tecnologías",
+            "address": "Calle Chacaltaya 303, La Paz, Bolivia",
+            "phone_number": "+591 2 6678901",
+            "website_url": "https://skylinetech.org",
+            "image_file": "skylinetech.jpg",
             "membership_level": 3,
-            "slogan": "Dream Big, Achieve More"
+            "slogan": "Alcanzando Nuevas Alturas"
         },
         {
-            "name": "David Lee",
-            "address": "404 Redwood Avenue, Miami, FL",
-            "phone_number": "+1 555-2345",
-            "website_url": "https://davidlee.com",
-            "image_file": "davidlee.jpg",
+            "name": "Nautica Solutions",
+            "address": "Avenida Sánchez Lima 404, La Paz, Bolivia",
+            "phone_number": "+591 2 7789012",
+            "website_url": "https://nauticasolutions.com",
+            "image_file": "nauticasolutions.jpg",
             "membership_level": 2,
-            "slogan": "Innovating the Industry"
+            "slogan": "Navegando Hacia el Futuro"
         }
     ]
 }
