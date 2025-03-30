@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (min-width: 40em) {
 
     /*header*/
     header {
@@ -29,7 +29,12 @@
     /*header end*/
 
     /*Directory*/
-
+    .gallery-list section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0;
+        padding: 0.25rem;
+    }
 
     /*Directory end*/
 

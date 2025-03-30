@@ -7,7 +7,7 @@
             "website_url": "https://techinnovations.com",
             "image_file": "techinnovations.jpg",
             "membership_level": 1,
-            "slogan": "Innovando el Futuro"
+            "slogan": "Innovating the Future"
         },
         {
             "name": "Soluciones Verdes",
@@ -16,7 +16,7 @@
             "website_url": "https://solucionesverdes.org",
             "image_file": "solucionesverdes.jpg",
             "membership_level": 2,
-            "slogan": "Prácticas Sostenibles para un Mañana Mejor"
+            "slogan": "Sustainable Practices for a Better Tomorrow"
         },
         {
             "name": "Bolivia Innovadora",
@@ -25,7 +25,7 @@
             "website_url": "https://boliviainnovadora.org",
             "image_file": "boliviainnovadora.jpg",
             "membership_level": 3,
-            "slogan": "Impulsando el Futuro de Bolivia"
+            "slogan": "Driving Bolivia's Future"
         },
         {
             "name": "Estudio Diseño Urbano",
@@ -34,7 +34,7 @@
             "website_url": "https://disenourbano.com",
             "image_file": "disenourbano.jpg",
             "membership_level": 2,
-            "slogan": "Diseñando el Futuro Urbano"
+            "slogan": "Designing the Urban Future"
         },
         {
             "name": "Manufacturas Avanzadas S.A.",
@@ -43,7 +43,7 @@
             "website_url": "https://manufacturasavanzadas.com",
             "image_file": "manufacturasavanzadas.jpg",
             "membership_level": 1,
-            "slogan": "Excelencia en Ingeniería"
+            "slogan": "Engineering Excellence"
         },
         {
             "name": "Skyline Tecnologías",
@@ -52,7 +52,7 @@
             "website_url": "https://skylinetech.org",
             "image_file": "skylinetech.jpg",
             "membership_level": 3,
-            "slogan": "Alcanzando Nuevas Alturas"
+            "slogan": "Reaching New Heights"
         },
         {
             "name": "Nautica Solutions",
@@ -61,7 +61,7 @@
             "website_url": "https://nauticasolutions.com",
             "image_file": "nauticasolutions.jpg",
             "membership_level": 2,
-            "slogan": "Navegando Hacia el Futuro"
+            "slogan": "Navigating Towards the Future"
         }
     ]
 }
