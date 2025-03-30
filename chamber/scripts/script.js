@@ -36,11 +36,13 @@ const displayMembers = (members) => {
         let mlevel = document.createElement('p');
         let slogan = document.createElement('p');
 
-        portrait.setAttribute('src', member.imageurl);
-        portrait.setAttribute('alt', `Portrait of ${prophet.name}`); /
-        portrait.setAttribute('loading', 'lazy');
-        portrait.setAttribute('width', '340');
-        portrait.setAttribute('height', '440');
+        logo.setAttribute('src', member.imageurl);
+        logo.setAttribute('alt', `logo of ${member.name}`);
+        logo.setAttribute('loading', 'lazy');
+        logo.setAttribute('width', '340');
+        logo.setAttribute('height', '440');
+
+
     })
 }
 
