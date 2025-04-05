@@ -23,10 +23,8 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/normalize.css">
-
-    <script src="scripts/scdirectory.js" defer></script>
     <script src="scripts/script.js" defer></script>
-
+    <script src="scripts/schome.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
 </head>
 
@@ -37,7 +35,7 @@
         </div>
         <button id="menu"></button>
         <nav class="navigation">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="directory.html">Directory</a>
             <a href="#">Join</a>
             <a href="#">Discover</a>
@@ -45,21 +43,50 @@
     </header>
 
     <main>
-        <div class="section-title">
-            <h1>Directory</h1>
-            <p>Discover the business engine of our city. In our directory, you'll find a wide variety of companies,
-                local
-                shops, and professionals committed to the growth of La Paz. Explore, connect, and expand your network!
-            </p>
-        </div>
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <img src="images/heroimage.jpg" alt="chamber of commerce font image" class="hero-image">
+            <div class="hero-content">
+                <p>Welcome to La Paz Chamber of Commerce</p>
+                <button class="hero-button">Join now!</button>
+            </div>
 
-        <div class="gallery-menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
         </div>
-        <article class="gallery-grid" id="gallery-cards">
-        </article>
     </main>
+    <div class="section-title">
+        <h1>Home</h1>
+    </div>
+    <div class="section-center section-3c">
+        <section class="section-block">
+            <h2>Events</h2>
+            <div class="section-block-content">
+                <h3>Upcoming Event: La Paz Business Expo 2025</h3>
+                <div class="section-2c">
+                    <img src="images/upcomming-event.png" alt="La Paz bussines expo 2025 event">
+                    <p>
+                        Discover new opportunities and connect with local businesses at the La Paz Business Expo 2025 —
+                        a vibrant event showcasing innovation, entrepreneurship, and community growth.
+                    </p>
+                </div>
+                <p><strong>Date:</strong> May 15, 2025</p>
+                <p><strong>Time:</strong> 9:00 AM – 5:00 PM</p>
+                <p><strong>Location:</strong> La Paz Convention Center</p>
+            </div>
+        </section>
+        <section class="section-block">
+            <h2>Current Wheather</h2>
+            <div class="section-weather">
+                <img id="weather-icon" src="" alt="">
+                <div id="weather-desc">
+
+                </div>
+            </div>
+        </section>
+        <section class="section-block">
+            <h2>Wheather Forecast</h2>
+        </section>
+    </div>
+
 
     <footer>
         <div class="footer-contact-info">
