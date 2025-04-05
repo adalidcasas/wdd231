@@ -320,6 +320,17 @@ header {
     padding: .25rem;
 }
 
+.section-weather-forecast p {
+    font-size: large;
+    padding: 1rem;
+    text-align: center;
+}
+
+.section-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 /**/
 
 /*footer*/
