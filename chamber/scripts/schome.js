@@ -114,11 +114,16 @@ const displayMembers = (members) => {
         let logo = document.createElement('img');
         let mlevel = document.createElement('p');
 
+        let levelst = "Level: Gold member";
+        if (member.membership_level === 2) {
+            levelst = "Level: Silver member";
+        }
+
         name.textContent = `${member.name}`;
         address.textContent = `${member.address}`;
         phone.textContent = `${member.phone_number}`;
         website.textContent = `${member.website_url}`;
-        mlevel.textContent = `${member.membership_level}`;
+        mlevel.textContent = `${levelst}`;
         card.className = 'gallery-card';
         logo.setAttribute('src', `images/${member.image_file}`);
         logo.setAttribute('alt', `logo of ${member.name}`);
@@ -131,6 +136,7 @@ const displayMembers = (members) => {
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(website);
+        card.appendChild(mlevel);
 
         cards.appendChild(card);
     })
