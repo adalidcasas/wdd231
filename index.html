@@ -1,14 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Adalid Casas">
+    <meta name="description" content="WDD 231 - Project | Course Home Page">
+    <title>Adalid Casas - Course Home Page</title>
+
+    <!-- font famlily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- styles-->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+
+    <!-- scripts -->
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD231</h1>
+    <header>
+        <div class="title">
+            <img src="images/index-profile.png" alt="Adalid Casas Profile Image">
+            <span>
+                Adalid Alonso Casas Contreras
+            </span>
+        </div>
+
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
+            <a href="https://github.com/adalidcasas" target="_blank">GitHub</a>
+            <a href="www.linkedin.com/in/adalidcasas" target="_blank">LinkedIn</a>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div class="card-division">
+            <section class="card card-left">
+                <h2 class="card-title">Course Work</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="card ">
+                <h2 class="card-title">La Paz, Bolivia</h2>
+                <div class="card-image">
+                    <img src="images/index-place-image.png" alt="La Paz City">
+                    <p>San Francisco Square</p>
+                </div>
+
+            </section>
+        </div>
+
+        <section class="card">
+            <h2 class="card-title">Web and Computer Programming Certificate</h2>
+            <div class="options">
+                <button id="btn-all">All</button>
+                <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
+            </div>
+            <div class="courses">
+                <span class="course cse">CSE 110</span>
+                <span class="course wdd">WDD 130</span>
+                <span class="course cse">CSE 111</span>
+                <span class="course cse">CSE 210</span>
+                <span class="course wdd">WDD 131</span>
+                <span class="course wdd">WDD 231</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Adalid Casas | La Paz, Bolivia</p>
+        <p id="lastModified"> </p>
+    </footer>
 </body>
 
 </html>

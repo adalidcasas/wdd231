@@ -1,0 +1,40 @@
+@media (min-width: 750px) {
+
+    .title {
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .card-division {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .card-left {
+        margin-right: 1rem;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
