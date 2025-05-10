@@ -149,6 +149,7 @@ h1 {
 }
 
 .card li {
+    color: var(--color-bg-dark);
     margin-top: .5rem;
     margin-left: 2rem;
 }
