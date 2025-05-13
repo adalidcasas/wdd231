@@ -2,14 +2,13 @@ const this_year = document.querySelector("#currentyear");
 const last_modified = document.querySelector("#lastModified");
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
-const title = document.getElementById('tittle-album');
 const menuOptions = document.querySelectorAll('a');
 
-let today = new Date();
-let last_date = new Date(document.lastModified);
+const today = new Date();
+const last_date = new Date(document.lastModified).toDateString();
 
-this_year.innerHTML = today.getFullYear();
-last_modified.innerHTML = `Last Modified:  <span class="highlight">${last_date}</span>`;
+this_year.textContent = today.getFullYear();
+last_modified.textContent = `Last Modified: ${last_date}`;
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
@@ -17,15 +16,12 @@ hamButton.addEventListener('click', () => {
 });
 
 navigation.addEventListener('click', function (e) {
-    const clickedElement = e.target;
+    const clickedElement = e.target.closest('a');
+    if (!clickedElement) return;
     title.textContent = clickedElement.textContent;
-    menuOptions.forEach(element => {
-        element.classList.remove('active')
-    });
-    clickedElement.classList.toggle('active');
-})
-
-
+    menuOptions.forEach(element => element.classList.remove('active'));
+    clickedElement.classList.add('active');
+});
 
 /*array courses*/
 const courses = [
@@ -109,48 +105,43 @@ const courses = [
 ]
 
 function resetCourses() {
-    const courses_div = document.querySelector('#courses');
-    courses_div.innerHTML = "";
-    return courses_div;
+    const container = document.querySelector('#courses');
+    container.innerHTML = "";
+    return container;
 }
 
-function displayCourses(listCourses, parentElement) {
-    const credits = listCourses.reduce((sum, c) => sum + c.credits, 0);
+function updateCredits(list) {
+    const totalCredits = list.reduce((sum, course) => sum + course.credits, 0);
+    const creditsSection = document.querySelector('.credits');
+    creditsSection.innerHTML = "";
 
-    const credits_message = document.createElement('p');
-    const credits_section = document.querySelector('.credits');
-    credits_message.classList.toggle('credits-message');
-    credits_message.innerHTML = `The total number of course listed below is ${credits}`;
-    credits_section.innerHTML = "";
-    credits_section.appendChild(credits_message);
+    const message = document.createElement('p');
+    message.classList.add('credits-message');
+    message.textContent = `The total number of credits for the courses listed below is ${totalCredits}.`;
+    creditsSection.appendChild(message);
+}
 
-    listCourses.forEach(c => {
+function displayCourses(list, parent) {
+    updateCredits(list);
+    const fragment = document.createDocumentFragment();
+    list.forEach(course => {
         const item = document.createElement('span');
-        item.classList.toggle('course');
-        if (c.completed) {
-            item.innerHTML = `✓  ${c.subject} ${c.number}`;
-            item.classList.toggle('active-course');
-        } else {
-            item.innerHTML = `${c.subject} ${c.number}`;
-            item.classList.remove('active-course');
-        }
-        parentElement.appendChild(item);
+        item.classList.add('course');
+        if (course.completed) item.classList.add('active-course');
+        item.textContent = `${course.completed ? '✓ ' : ''}${course.subject} ${course.number}`;
+        fragment.appendChild(item);
     });
+    parent.appendChild(fragment);
 }
 
-const select_all = document.querySelector('#btn-all');
-select_all.addEventListener('click', () => {
-    displayCourses(courses, resetCourses());
-});
+const buttons = [
+    { id: '#btn-all', filter: () => courses },
+    { id: '#btn-cse', filter: () => courses.filter(c => c.subject === 'CSE') },
+    { id: '#btn-wdd', filter: () => courses.filter(c => c.subject === 'WDD') },
+];
 
-const select_cse = document.querySelector('#btn-cse');
-const cse_courses = courses.filter(c => c.subject === 'CSE');
-select_cse.addEventListener('click', () => {
-    displayCourses(cse_courses, resetCourses());
-});
-
-const select_wdd = document.querySelector('#btn-wdd');
-const wdd_courses = courses.filter(c => c.subject === 'WDD');
-select_wdd.addEventListener('click', () => {
-    displayCourses(wdd_courses, resetCourses());
+buttons.forEach(({ id, filter }) => {
+    document.querySelector(id).addEventListener('click', () => {
+        displayCourses(filter(), resetCourses());
+    });
 });
