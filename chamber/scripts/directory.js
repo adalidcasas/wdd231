@@ -15,28 +15,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const cards = document.querySelector('#gallery-cards');
+
     const displayMembers = (members) => {
         const fragment = document.createDocumentFragment();
 
-        members.forEach(({ name, address, phone_number, website_url, membership_level, slogan, image_file }) => {
+        members.forEach(({ name, address, phone_number, website_url, membership_level, slogan, image_file }, index) => {
             const card = document.createElement('section');
             card.className = 'gallery-card';
 
+            // Elegimos atributos dinámicamente según el índice
+            const loadingAttr = index === 0 ? '' : 'loading="lazy"';
+            const priorityAttr = index === 0 ? 'fetchpriority="high"' : 'fetchpriority="auto"';
+
             card.innerHTML = `
-                <h3>${name}</h3>
-                <p class="gallery-grid-only">${slogan}</p>
-                <img src="images/${image_file}" alt="logo of ${name}" loading="lazy" width="340" height="440" class="gallery-grid-only">
-                <p>${address}</p>
-                <p>${phone_number}</p>
-                <p>${website_url}</p>
-                <p>${membership_level}</p>
-            `;
+            <h3>${name}</h3>
+            <p class="gallery-grid-only">${slogan}</p>
+            <img src="images/${image_file}" alt="logo of ${name}" width="340" height="440" class="gallery-grid-only" ${loadingAttr} ${priorityAttr}>
+            <p>${address}</p>
+            <p>${phone_number}</p>
+            <p>${website_url}</p>
+            <p>${membership_level}</p>
+        `;
 
             fragment.appendChild(card);
         });
 
         cards.appendChild(fragment);
     };
+
 
     async function getMembersData() {
         try {
