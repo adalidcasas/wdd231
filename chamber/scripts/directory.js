@@ -1,87 +1,70 @@
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-const menu_options = document.querySelectorAll('.navigation a');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('.navigation');
 
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
-});
-
-navigation.addEventListener('click', function (e) {
-    const clickedElement = e.target;
-    menu_options.forEach((element) => {
-        element.classList.remove('active');
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
     });
-    clickedElement.classList.toggle('active');
+
+    navigation.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            document.querySelectorAll('.navigation a').forEach(el => el.classList.remove('active'));
+            e.target.classList.add('active');
+        }
+    });
+
+    const cards = document.querySelector('#gallery-cards');
+    const displayMembers = (members) => {
+        const fragment = document.createDocumentFragment();
+
+        members.forEach(({ name, address, phone_number, website_url, membership_level, slogan, image_file }) => {
+            const card = document.createElement('section');
+            card.className = 'gallery-card';
+
+            card.innerHTML = `
+                <h3>${name}</h3>
+                <p class="gallery-grid-only">${slogan}</p>
+                <img src="images/${image_file}" alt="logo of ${name}" loading="lazy" width="340" height="440" class="gallery-grid-only">
+                <p>${address}</p>
+                <p>${phone_number}</p>
+                <p>${website_url}</p>
+                <p>${membership_level}</p>
+            `;
+
+            fragment.appendChild(card);
+        });
+
+        cards.appendChild(fragment);
+    };
+
+    async function getMembersData() {
+        try {
+            const response = await fetch("data/members.json");
+            if (!response.ok) throw new Error("Error al cargar los datos.");
+            const data = await response.json();
+            displayMembers(data.members);
+        } catch (error) {
+            console.error("Ocurrió un error al cargar los miembros:", error);
+        }
+    }
+    getMembersData();
+
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    const display = document.querySelector("#gallery-cards");
+
+    gridbutton.addEventListener('click', () => {
+        display.classList.replace("gallery-list", "gallery-grid");
+    });
+
+    listbutton.addEventListener("click", () => {
+        display.classList.replace("gallery-grid", "gallery-list");
+    });
+
+    const this_year = document.querySelector("#currentyear");
+    const last_modified = document.querySelector("#lastModified");
+
+    this_year.textContent = `©${new Date().getFullYear()} La Paz Chamber of Commerce`;
+    last_modified.textContent = `Last Modified: ${document.lastModified}`;
 });
-
-const cards = document.querySelector('#gallery-cards');
-const displayMembers = (members) => {
-    members.forEach((member) => {
-        let card = document.createElement('section');
-        let name = document.createElement('h3');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
-        let website = document.createElement('p');
-        let logo = document.createElement('img');
-        let mlevel = document.createElement('p');
-        let slogan = document.createElement('p');
-
-        card.className = 'gallery-card';
-        slogan.className = 'gallery-grid-only';
-        logo.className = 'gallery-grid-only';
-
-        name.textContent = `${member.name}`;
-        address.textContent = `${member.address}`;
-        phone.textContent = `${member.phone_number}`;
-        website.textContent = `${member.website_url}`;
-        mlevel.textContent = `${member.membership_level}`;
-        slogan.textContent = `${member.slogan}`;
-
-        logo.setAttribute('src', `images/${member.image_file}`);
-        logo.setAttribute('alt', `logo of ${member.name}`);
-        logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '340');
-        logo.setAttribute('height', '440');
-
-        card.appendChild(name);
-        card.appendChild(slogan);
-        card.appendChild(logo);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
-
-        cards.appendChild(card);
-    })
-}
-
-async function getMembersData() {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    console.table(data.members);
-    displayMembers(data.members);
-}
-getMembersData()
-
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("#gallery-cards");
-
-gridbutton.addEventListener('click', () => {
-    display.classList.add("gallery-grid");
-    display.classList.remove("gallery-list");
-});
-
-listbutton.addEventListener("click", () => {
-    display.classList.remove("gallery-grid");
-    display.classList.add("gallery-list");
-});
-
-
-const this_year = document.querySelector("#currentyear");
-const last_modified = document.querySelector("#lastModified");
-const today = new Date();
-const last_date = new Date(document.lastModified).toDateString();
-
-this_year.innerHTML = `&copy;${today.getFullYear()} La Paz Chamber of Commerce`;
-last_modified.innerHTML = `Last Modified: ${last_date}`;

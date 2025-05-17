@@ -8,12 +8,16 @@
     <meta name="description" content="La Paz Chamber of Commerce">
     <title>Adalid Casas - Course Home Page</title>
 
-    <!-- font famlily -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap">
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-        rel="stylesheet">
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap">
+    </noscript>
+
 
     <!-- styles-->
     <link rel="stylesheet" href="styles/small.css" media="print" onload="this.onload=null;this.media='all';">
@@ -38,7 +42,7 @@
 <body>
     <header>
         <div class="title">
-            <img src="images/logo.png" alt="Chamber of Commerce Logo">
+            <img src="images/logo.webp" alt="Chamber of Commerce Logo">
         </div>
         <button id="menu" aria-label="menu-button"></button>
         <nav class="navigation">
