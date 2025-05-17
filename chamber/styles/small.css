@@ -1,5 +1,4 @@
 :root {
-    /* CSS HEX */
     --color-bg-dark: #0a0a1a;
     --color-bg-light: #e6e6e6;
     --color-text-light: #e6e6e6;
@@ -14,44 +13,46 @@
 
 * {
     margin: 0 auto;
-    max-width: var(--width);
     padding: 0;
+    max-width: var(--width);
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size-adjust: 0.5;
     font-optical-sizing: auto;
     color: var(--color-text-dark);
 }
 
-/*header*/
+/* HEADER */
 header {
     padding: 0.5rem;
     background-color: var(--color-bg-dark);
 }
 
 .title img {
+    width: 100%;
     max-width: 250px;
     height: auto;
+    aspect-ratio: 5 / 2;
+    /* ayuda a evitar CLS */
     margin: 0;
 }
 
 .navigation {
     display: block;
-    align-items: flex-end;
 }
 
 .navigation a {
-    color: var(--color-primary);
     display: none;
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
     flex: 1;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 0 1rem;
     font-weight: bold;
     border-bottom: 1px solid var(--color-bg-dark);
-    transition: color 0.3s ease-out;
-    transition: border-bottom 0.3s ease-in-out;
+    transition: color 0.3s ease-out, border-bottom 0.3s ease-in-out;
 }
 
 .navigation a.active {
@@ -64,7 +65,7 @@ header {
 }
 
 #menu {
-    border: 0;
+    border: none;
     background: var(--color-bg-dark);
     color: var(--color-primary);
     position: absolute;
@@ -73,14 +74,13 @@ header {
 }
 
 #menu::before {
-    font-family: monospace;
     content: "☰";
+    font-family: monospace;
     font-size: xx-large;
     font-weight: bolder;
 }
 
 #menu.open::before {
-    font-family: monospace;
     content: "X";
 }
 
@@ -88,14 +88,13 @@ header {
     display: block;
 }
 
-/*Header end*/
-
-/*Directory*/
+/* DIRECTORY */
 .section-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem;
 }
 
 .gallery-menu {
@@ -106,12 +105,15 @@ header {
 }
 
 .gallery-menu button {
-    padding: .5rem 2rem;
-    margin: 0 2rem;
+    padding: 0.5rem 2rem;
+    margin: 0 1rem;
     font-weight: bold;
     background-color: var(--color-button);
     color: var(--color-bg-dark);
-    border: 0;
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    transition: background-color 0.3s ease;
 }
 
 .gallery-menu button:hover {
@@ -119,6 +121,12 @@ header {
     background-color: var(--color-button-hover);
 }
 
+#gallery-cards {
+    min-height: 600px;
+    /* evita CLS al cargar tarjetas dinámicas */
+}
+
+/* Grid view */
 .gallery-card {
     background-color: var(--color-bg-light);
     border: 1px solid var(--color-bg-dark);
@@ -127,31 +135,34 @@ header {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 5px;
-    align-items: center;
+    gap: 5px;
+    align-items: start;
+}
+
+.gallery-grid section {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.gallery-grid h3 {
+    margin: 0.5rem 0;
 }
 
 .gallery-grid p {
     font-size: small;
 }
 
-.gallery-grid h3 {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-}
-
-.gallery-grid section {
-    margin: .5rem;
-    padding: .5rem;
-    text-align: center;
-}
-
 .gallery-grid img {
-    border: none;
     margin: 1.5rem 0;
-    width: fit-content;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 17 / 11;
+    /* evita saltos visuales */
+    display: block;
 }
 
+/* List view */
 .gallery-list {
     display: flex;
     flex-direction: column;
@@ -162,10 +173,11 @@ header {
     display: flex;
     flex-direction: column;
     border: none;
+    padding: 0.5rem 1rem;
 }
 
 .gallery-list section>* {
-    margin: .5rem 1rem;
+    margin: 0.5rem 0;
 }
 
 .gallery-list .gallery-grid-only {
@@ -180,23 +192,14 @@ header {
     background-color: var(--color-secondary-bg);
 }
 
-.gallery-grid img {
-    height: 75px;
-    max-width: 100%;
-}
-/*Directory end*/
-
-
-/*footer*/
-
+/* FOOTER */
 footer {
     background-color: var(--color-footer-bg);
     display: flex;
     flex-direction: column;
     font-size: small;
     margin-top: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 footer h3,
@@ -204,12 +207,12 @@ footer p,
 footer span,
 footer a {
     color: var(--color-text-light);
-    padding: .25rem 0;
+    padding: 0.25rem 0;
 }
 
 .footer-contact-info,
 .footer-author-info {
-    padding: .5rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -222,13 +225,10 @@ footer a {
     margin-top: 2rem;
     max-width: 50px;
     height: auto;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .footer-social-media {
     display: flex;
-    vertical-align: middle;
     align-items: center;
 }
-
-/*footer end*/
