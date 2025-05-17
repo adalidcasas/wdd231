@@ -1,0 +1,380 @@
+:root {
+    /* CSS HEX */
+    --color-bg-dark: #0a0a1a;
+    --color-bg-light: #e6e6e6;
+    --color-text-light: #e6e6e6;
+    --color-text-dark: #0a0a1a;
+    --color-primary: #f9f2b3;
+    --color-secondary-bg: #f4f4f4;
+    --color-button: #ffc107;
+    --color-button-hover: #e0a800;
+    --color-footer-bg: #2c3e50;
+    --width: 950px;
+}
+
+* {
+    margin: 0 auto;
+    max-width: var(--width);
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    color: var(--color-text-dark);
+}
+
+/*header*/
+header {
+    padding: 0.5rem;
+    background-color: var(--color-bg-dark);
+}
+
+.title img {
+    max-width: 250px;
+    height: auto;
+    margin: 0;
+}
+
+.navigation {
+    display: block;
+    align-items: flex-end;
+}
+
+.navigation a {
+    color: var(--color-primary);
+    display: none;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    flex: 1;
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-bg-dark);
+    transition: color 0.3s ease-out;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.navigation a.active {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.navigation a:hover {
+    color: var(--color-button);
+    border-bottom: 1px solid var(--color-primary);
+}
+
+#menu {
+    border: 0;
+    background: var(--color-bg-dark);
+    color: var(--color-primary);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    font-family: monospace;
+    content: "☰";
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#menu.open::before {
+    font-family: monospace;
+    content: "X";
+}
+
+.open a {
+    display: block;
+}
+
+/*Header end*/
+
+/*Directory*/
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-menu {
+    margin: 1rem auto;
+    background-color: var(--color-bg-light);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.gallery-menu button {
+    padding: .5rem 2rem;
+    margin: 0 2rem;
+    font-weight: bold;
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    border: 0;
+}
+
+.gallery-menu button:hover {
+    cursor: pointer;
+    background-color: var(--color-button-hover);
+}
+
+.gallery-card {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-bg-dark);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.gallery-grid p {
+    font-size: small;
+}
+
+.gallery-grid h3 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.gallery-grid section {
+    margin: .5rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+.gallery-grid img {
+    border: none;
+    margin: 1.5rem 0;
+    width: fit-content;
+}
+
+.gallery-list {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+.gallery-list section {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.gallery-list section>* {
+    margin: .5rem 1rem;
+}
+
+.gallery-list .gallery-grid-only {
+    display: none;
+}
+
+.gallery-list section h3 {
+    font-size: 1rem;
+}
+
+
+.gallery-list section:nth-child(even) {
+    background-color: var(--color-secondary-bg);
+}
+
+.gallery-grid img {
+    height: 75px;
+    max-width: 100%;
+}
+
+/*Directory end*/
+
+/*index */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(244, 241, 241, 0));
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: xx-large;
+    margin: 0;
+    width: 25rem;
+    color: var(--color-primary);
+}
+
+.hero-button {
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    border: none;
+    padding: .75rem 4rem;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.section-3c {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-block {
+    background-color: var(--color-bg-light);
+    margin: 0;
+    border: 1px solid var(--color-bg-dark);
+}
+
+.section-block h2 {
+    margin: 0;
+    font-size: large;
+    padding: .5rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.section-block-content {
+    min-height: 250px;
+    padding: .5rem;
+}
+
+.section-block-content>* {
+    padding-top: .5rem;
+}
+
+.section-block-content h3,
+.section-block-content p {
+    text-align: center;
+}
+
+.section-2c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-2c h3 {
+    text-align: center;
+    font-size: x-large;
+    text-align: left;
+}
+
+.section-2c p {
+    font-size: small;
+}
+
+.section-block-content img {
+    max-width: 200px;
+    border-radius: 1rem 0;
+    border: 1px solid var(--color-bg-dark);
+}
+
+.section-weather {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.section-weather img {
+    width: 100px;
+}
+
+.section-weather h3 {
+    padding: 2rem 0;
+    font-size: x-large;
+}
+
+.section-weather p {
+    font-size: small;
+    padding: .25rem;
+}
+
+.section-weather-forecast p {
+    font-size: large;
+    padding: 1rem;
+    text-align: center;
+}
+
+.section-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/**/
+
+/*footer*/
+
+footer {
+    background-color: var(--color-footer-bg);
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer h3,
+footer p,
+footer span,
+footer a {
+    color: var(--color-text-light);
+    padding: .25rem 0;
+}
+
+.footer-contact-info,
+.footer-author-info {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-info span {
+    font-weight: bold;
+}
+
+.footer-social-media-info img {
+    margin-top: 2rem;
+    max-width: 50px;
+    height: auto;
+    padding: .5rem;
+}
+
+.footer-social-media {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+/*footer end*/
