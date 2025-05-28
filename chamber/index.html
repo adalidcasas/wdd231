@@ -52,7 +52,10 @@
     <main>
         <div class="hero">
             <div class="hero-overlay"></div>
-            <img src="images/heroimage.webp" alt="chamber of commerce font image" class="hero-image">
+            <picture>
+                <source srcset="images/heroimage.webp" media="(min-width: 45em)">
+                <img src="images/heroimage_small.webp" alt="chamber of commerce font image" class="hero-image">
+            </picture>
             <div class="hero-content">
                 <p>Welcome to La Paz Chamber of Commerce</p>
                 <button class="hero-button">Join now!</button>
