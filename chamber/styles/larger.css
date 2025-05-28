@@ -1,9 +1,13 @@
 @media (min-width: 45em) {
 
-    /*header*/
+    /* HEADER */
     header {
         display: flex;
         justify-content: space-between;
+    }
+
+    .title img {
+        max-width: 250px;
     }
 
     #menu {
@@ -27,7 +31,24 @@
         flex: 1 1 100%;
     }
 
-    /*header end*/
+    /**/
+
+    /* HOME */
+    .hero {
+        height: 550px;
+    }
+
+    .hero-content p {
+        width: 25rem;
+    }
+
+    .section-3c {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /**/
 
     /*Directory*/
     .gallery-list section {

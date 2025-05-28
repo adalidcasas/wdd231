@@ -8,7 +8,7 @@
     --color-button: #ffc107;
     --color-button-hover: #e0a800;
     --color-footer-bg: #2c3e50;
-    --width: 950px;
+    --width: 1050px;
 }
 
 * {
@@ -30,10 +30,9 @@ header {
 
 .title img {
     width: 100%;
-    max-width: 250px;
+    max-width: 150px;
     height: auto;
-    aspect-ratio: 5 / 2;
-    /* ayuda a evitar CLS */
+    aspect-ratio: 4 / 2;
     margin: 0;
 }
 
@@ -88,6 +87,155 @@ header {
     display: block;
 }
 
+/* HOME */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: xx-large;
+    margin: 0;
+    width: 18rem;
+    color: var(--color-bg-light);
+}
+
+.hero-button {
+    padding: .75rem 3.5rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    border: none;
+    font-size: large;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.section-3c {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-center {
+    margin-top: 2rem;
+}
+
+.section-block {
+    background-color: var(--color-bg-light);
+    margin: 0;
+    border: 1px solid var(--color-bg-dark);
+}
+
+.section-block h2 {
+    margin: 0;
+    font-size: large;
+    padding: .5rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.section-block-content {
+    min-height: 250px;
+    padding: .5rem;
+}
+
+.section-block-content>* {
+    padding-top: .5rem;
+}
+
+.section-block-content h3,
+.section-block-content p {
+    text-align: center;
+}
+
+.section-2c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-2c h3 {
+    text-align: center;
+    font-size: x-large;
+    text-align: left;
+}
+
+.section-2c p {
+    font-size: small;
+}
+
+.section-block-content img {
+    max-width: 200px;
+    border-radius: 1rem 0;
+    border: 1px solid var(--color-bg-dark);
+}
+
+.section-weather {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.section-weather img {
+    width: 100px;
+}
+
+.section-weather h3 {
+    padding: 2rem 0;
+    font-size: x-large;
+}
+
+.section-weather p {
+    font-size: small;
+    padding: .25rem;
+}
+
+.section-weather-forecast p {
+    font-size: large;
+    padding: 1rem;
+    text-align: center;
+}
+
+.section-members {
+    margin-top: 2rem;
+}
+
+/**/
+
 /* DIRECTORY */
 .section-title {
     display: flex;
@@ -113,6 +261,7 @@ header {
     border: none;
     min-width: 80px;
     height: 40px;
+    border-radius: .25rem;
     transition: background-color 0.3s ease;
 }
 
