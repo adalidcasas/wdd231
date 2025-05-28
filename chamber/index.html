@@ -33,12 +33,16 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://adalidcasas.github.io/wdd231/chamber/images/logo.png">
     <meta property="og:type" content="website">
+
+    <!-- preload images -->
+    <link rel="preload" as="image" href="images/heroimage.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/heroimage-smal.webp" type="image/webp">
 </head>
 
 <body>
     <header>
         <div class="title">
-            <img src="images/logo.webp" alt="Chamber of Commerce Logo" width="200" height="100">
+            <img src="images/logo.webp" alt="Chamber of Commerce Logo" width="200" height="100" loading="eager">
         </div>
         <button id="menu" aria-label="menu-button"></button>
         <nav class="navigation">
@@ -54,7 +58,8 @@
             <div class="hero-overlay"></div>
             <picture>
                 <source srcset="images/heroimage.webp" media="(min-width: 45em)">
-                <img src="images/heroimage_small.webp" alt="chamber of commerce font image" class="hero-image">
+                <img src="images/heroimage_small.webp" alt="chamber of commerce font image" class="hero-image"
+                    loading="eager" fetchpriority="high">
             </picture>
             <div class="hero-content">
                 <p>Welcome to La Paz Chamber of Commerce</p>
@@ -68,7 +73,7 @@
             <div class="section-block-content">
                 <h3>Upcoming Event: La Paz Business Expo 2025</h3>
                 <div class="section-2c">
-                    <img src="images/upcomming-event.webp" alt="La Paz bussines expo 2025 event">
+                    <img src="images/upcomming-event.webp" alt="La Paz bussines expo 2025 event" loading="eager">
                     <p>
                         Discover new opportunities and connect with local businesses at the La Paz Business Expo 2025 —
                         a vibrant event showcasing innovation, entrepreneurship, and community growth.
