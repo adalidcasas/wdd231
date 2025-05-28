@@ -22,6 +22,11 @@
     color: var(--color-text-dark);
 }
 
+html {
+    font-display: swap;
+}
+
+
 /* HEADER */
 header {
     padding: 0.5rem;
@@ -98,6 +103,7 @@ header {
 .hero-image {
     width: 100%;
     height: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     position: absolute;
     top: 0;
