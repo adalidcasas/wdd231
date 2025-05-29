@@ -130,6 +130,9 @@ function displayCourses(list, parent) {
         if (course.completed) item.classList.add('active-course');
         item.textContent = `${course.completed ? '✓ ' : ''}${course.subject} ${course.number}`;
         fragment.appendChild(item);
+        item.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
     });
     parent.appendChild(fragment);
 }
@@ -145,3 +148,22 @@ buttons.forEach(({ id, filter }) => {
         displayCourses(filter(), resetCourses());
     });
 });
+
+//dialog-modal
+const courseDetails = document.querySelector("#course-details");
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2 class="dialog-title">${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Tecnologies</strong>: ${course.technology.join(', ')}</p>
+        `;
+    courseDetails.showModal();
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
