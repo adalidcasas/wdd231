@@ -176,6 +176,7 @@ h1 {
 }
 
 .options button:hover {
+    cursor: pointer;
     border: var(--color-primary) 1px solid;
     background-color: var(--color-primary);
     color: var(--color-bg-dark);
@@ -204,6 +205,21 @@ h1 {
     padding: .5rem 2rem;
     margin: .5rem 1rem .5rem 1rem;
     font-weight: bold;
+    transition: background-color .5s ease, color .5s ease, border .5s ease;
+}
+
+.course:hover {
+    cursor: pointer;
+    background-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+    border: var(--color-text-light) 1px solid;
+}
+
+.active-course:hover {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    border: var(--color-primary) 1px solid;
 }
 
 .active-course {
@@ -266,6 +282,15 @@ dialog button {
 dialog h3,
 dialog p {
     margin-top: 1rem;
+}
+
+#closeModal {
+    transition: background-color .5s ease;
+}
+
+#closeModal:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-dark);
 }
 
 /****************/

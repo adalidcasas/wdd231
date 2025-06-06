@@ -350,6 +350,116 @@ header {
     background-color: var(--color-secondary-bg);
 }
 
+/* JOIN PAGE*/
+.forms {
+    background-color: var(--color-secondary-bg);
+    border-radius: .5rem;
+    padding: 0 1rem;
+    width: 90%;
+}
+
+.forms fieldset {
+    margin: .5rem auto;
+    border: none;
+    padding: .5rem 1rem 2rem .5rem;
+}
+
+.forms label,
+.forms p {
+    display: block;
+    padding-top: 1rem;
+    color: var(--color-text-dark);
+    font-size: .9rem;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.forms input[type="text"],
+.forms input[type="email"],
+.forms input[type="tel"],
+.forms input[type="textarea"] {
+    background-color: var(--color-primary);
+    display: block;
+    border: solid 1px var(--color-bg-dark);
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--color-text-dark);
+    width: 100%;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.forms input[type="radio"] {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.form-radio {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.forms input[type="submit"] {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    width: 60%;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease;
+}
+
+.join-cards {
+    display: block;
+    margin-top: -1rem;
+}
+
+.join-card {
+    background-color: var(--color-secondary-bg);
+    border: 1px solid var(--color-bg-dark);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.join-card:hover {
+    cursor: pointer;
+    background-color: var(--color-primary);
+}
+
+.join-card h3 {
+    text-align: center;
+}
+
+.join-card p,
+.join-card li {
+    margin: .5rem 0;
+}
+
+.join-card li {
+    margin-left: 2rem;
+    font-size: small;
+}
+
+/************/
+
 /* FOOTER */
 footer {
     background-color: var(--color-footer-bg);
