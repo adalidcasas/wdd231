@@ -27,8 +27,10 @@ export async function loadMembers(highlevel = false) {
         if (!response.ok) throw new Error("Error al cargar los datos.");
         const data = await response.json();
         if (highlevel) {
-            const datafiltered = data.members.filter(c => c.membership_level === 1 || c.membership_level === 2).slice(2);
-            displayMembers(datafiltered);
+            const filtered = data.members.filter(c => c.membership_level === 1 || c.membership_level === 2);
+            const shuffled = filtered.sort(() => Math.random() - 0.5);
+            const randomSelection = shuffled.slice(0, 3);
+            displayMembers(randomSelection);
         }
         else {
             displayMembers(data.members);
