@@ -151,6 +151,10 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.hero-button a {
+    text-decoration: none;
+}
+
 .hero-button:hover {
     background-color: var(--color-button-hover);
 }
@@ -377,7 +381,7 @@ header {
 .forms input[type="text"],
 .forms input[type="email"],
 .forms input[type="tel"],
-.forms input[type="textarea"] {
+.forms textarea {
     background-color: var(--color-primary);
     display: block;
     border: solid 1px var(--color-bg-dark);
@@ -425,37 +429,179 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.forms input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--color-button-hover);
+}
+
 .join-cards {
+    margin-top: 1rem;
     display: block;
-    margin-top: -1rem;
 }
 
 .join-card {
     background-color: var(--color-secondary-bg);
     border: 1px solid var(--color-bg-dark);
     border-radius: .5rem;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: .5rem;
+    margin: 1rem 2rem 0 2rem;
     transition: background-color 0.3s ease;
+    /*animation*/
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease-out forwards;
+
+    /*animation hover*/
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-bg-dark);
+    transition: border-color 0.3s ease;
 }
 
 .join-card:hover {
-    cursor: pointer;
-    background-color: var(--color-primary);
+    border-color: var(--color-button-hover);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.join-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.join-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.join-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.join-card:nth-child(4) {
+    animation-delay: 0.4s;
 }
 
 .join-card h3 {
+    margin: 0;
+    text-align: center;
+    font-size: x-large;
+}
+
+.join-card button {
+    margin-left: 25%;
+    margin-right: 25%;
+    font-weight: bold;
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    border: none;
+    min-width: 80px;
+    height: 30px;
+    width: 50%;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease;
+}
+
+.join-card button:hover {
+    cursor: pointer;
+    background-color: var(--color-button-hover);
+}
+
+.join-card p {
+    margin: .5rem;
     text-align: center;
 }
 
-.join-card p,
-.join-card li {
-    margin: .5rem 0;
+.join-card-info {
+    text-align: right;
+    font-style: italic;
 }
 
-.join-card li {
-    margin-left: 2rem;
-    font-size: small;
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 10rem;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.dialog-title {
+    display: flex;
+    justify-content: center;
+    padding: .9rem 0;
+    margin: 0 auto;
+    border-radius: .25rem;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-size: large;
+}
+
+dialog h3,
+dialog p {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+dialog li {
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+
+.closeModal {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    background-color: var(--color-bg-dark);
+    transition: background-color .5s ease;
+    border: none;
+}
+
+.closeModal:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-light);
+}
+
+.registration-summary {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    margin: 1rem 25% 2rem 25%;
+    background-color: var(--color-bg-light);
+}
+
+.registration-summary p {
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.return-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem 2.5rem;
+    text-decoration: none;
+    margin: 0 35% 0 35%;
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--color-button);
+    color: var(--color-bg-dark);
+    min-width: 80px;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: var(--color-button-hover);
 }
 
 /************/

@@ -48,7 +48,12 @@
     </header>
 
     <main>
-        <h1>Join us!</h1>
+        <div class="section-title">
+            <h1>Join us!</h1>
+            <p>Join the La Paz Chamber of Commerce and become part of a dynamic network of local businesses driving
+                growth
+                and opportunity in our city.</p>
+        </div>
         <div class="join-page">
             <form method="get" action="thankyou.html" class="forms">
                 <fieldset>
@@ -72,24 +77,25 @@
 
                     <p>Membership level</p>
                     <label for="ml-nonprofit" class="form-radio">
-                        <input type="radio" id="ml-nonprofit" name="memberchip" value="false" required>
+                        <input type="radio" id="ml-nonprofit" name="membership" value="0" required>
                         NP Membership
                     </label>
                     <label for="ml-bronze" class="form-radio">
-                        <input type="radio" id="ml-bronze" name="memberchip" value="false" required>
+                        <input type="radio" id="ml-bronze" name="membership" value="1" required>
                         Bronze Membership
                     </label>
                     <label for="ml-silver" class="form-radio">
-                        <input type="radio" id="ml-silver" name="memberchip" value="false" required>
+                        <input type="radio" id="ml-silver" name="membership" value="2" required>
                         Silver Membership
                     </label>
                     <label for="ml-gold" class="form-radio">
-                        <input type="radio" id="ml-gold" name="memberchip" value="false" required>
+                        <input type="radio" id="ml-gold" name="membership" value="3" required>
                         Gold Membership
                     </label>
 
                     <label for="businessdescription">Business / Organization Description</label>
-                    <input type="textarea" name="businessdescription" id="businessdescription">
+                    <textarea name="businessdescription" id="businessdescription" rows="4" cols="50"></textarea>
+                    <input type="hidden" name="timestamp" id="timestamp">
 
                 </fieldset>
                 <input type="submit" name="submitbutton" id="submitbutton" value="Submit">
@@ -99,19 +105,32 @@
                 <section class="join-card">
                     <h3>💙 NP Membership</h3>
                     <p>Perfect for community-focused or charitable organizations</p>
+                    <button id="np-membership-title">See details</button>
+                </section>
+                <dialog id="np-membership-details">
+                    <button class="closeModal">❌</button>
+                    <h3 class="dialog-title">💙 NP Membership</h3>
+                    <p>Perfect for community-focused or charitable organizations</p>
                     <p><strong>Fee:</strong> Free</p>
+                    <p><strong>Benefits:</strong></p>
                     <ul>
                         <li>Inclusion in member directory</li>
                         <li>Access to community events</li>
                         <li>Eligible for community awards</li>
                     </ul>
-                </section>
-
+                </dialog>
                 <!-- Bronze Membership -->
                 <section class="join-card">
                     <h3>🥉 Bronze Membership</h3>
                     <p>Perfect for small businesses or individuals getting started</p>
-                    <p><strong>Fee:</strong> Affordable</p>
+                    <button id="bronze-title">See details</button>
+                </section>
+                <dialog id="bronze-details">
+                    <button class="closeModal">❌</button>
+                    <h3 class="dialog-title">💙 NP Membership</h3>
+                    <p>Perfect for small businesses or individuals getting started</p>
+                    <p><strong>Fee:</strong> USD 125 / year</p>
+                    <p><strong>Benefits:</strong></p>
                     <ul>
                         <li>All NP Membership benefits</li>
                         <li>Listing on the website</li>
@@ -119,13 +138,19 @@
                         <li>Basic training and workshops</li>
                         <li>Event participation discounts</li>
                     </ul>
-                </section>
-
+                </dialog>
                 <!-- Silver Membership -->
                 <section class="join-card">
                     <h3>🥈 Silver Membership</h3>
                     <p>Perfect for growing businesses seeking visibility and growth</p>
-                    <p><strong>Fee:</strong> Moderate</p>
+                    <button id="silver-title">See details</button>
+                </section>
+                <dialog id="silver-details">
+                    <button class="closeModal">❌</button>
+                    <h3 class="dialog-title">🥈 Silver Membership</h3>
+                    <p>Perfect for growing businesses seeking visibility and growth</p>
+                    <p><strong>Fee:</strong> USD 250 / year </p>
+                    <p><strong>Benefits:</strong></p>
                     <ul>
                         <li>All Bronze benefits</li>
                         <li>Featured spot in the online directory</li>
@@ -133,20 +158,27 @@
                         <li>Quarterly promotional spotlight</li>
                         <li>1 Free advertising banner per year</li>
                     </ul>
-                </section>
+                </dialog>
 
                 <!-- Gold Membership -->
                 <section class="join-card">
                     <h3>🥇 Gold Membership</h3>
                     <p>Perfect for established businesses or key partners seeking high visibility</p>
-                    <p><strong>Fee:</strong> Premium</p>
+                    <button id="gold-title">See details</button>
+                </section>
+                <dialog id="gold-details">
+                    <button class="closeModal">❌</button>
+                    <h3 class="dialog-title">🥇 Gold Membership</h3>
+                    <p>Perfect for established businesses or key partners seeking high visibility</p>
+                    <p><strong>Fee:</strong> USD 350 / year</p>
+                    <p><strong>Benefits:</strong></p>
                     <ul>
                         <li>All Silver benefits</li>
                         <li>Home page spotlight position</li>
                         <li>Featured profile in newsletter</li>
                         <li>VIP invitations to exclusive events</li>
                         <li>Priority vendor booth selection</li>
-
+                </dialog>
             </div>
     </main>
     <footer>

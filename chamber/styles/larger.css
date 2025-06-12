@@ -48,7 +48,28 @@
         gap: 1rem;
     }
 
+    .section-title p {
+        width: 75%;
+    }
+
     /**/
+
+    /* JOIN PAGE */
+    .join-page {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .join-cards {
+        margin-top: -1rem;
+        margin-right: 2rem;
+    }
+
+    .join-card {
+        margin: 1rem 0 0 0;
+    }
+
+    /*************/
 
     /*Directory*/
     .gallery-list section {
@@ -59,14 +80,6 @@
     }
 
     /*Directory end*/
-
-    /*Join Page*/
-    .join-page {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-    }
-
-    /***********/
 
     /*footer*/
     footer {
