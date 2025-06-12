@@ -12,4 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     apiWeatherForecast();
     loadMembers(true);
     setFooterInfo();
+
+    const herobutton = document.querySelector('#call-to-action-button');
+    herobutton.addEventListener('click', () => {
+        window.location.href = 'join.html';
+    });
 });

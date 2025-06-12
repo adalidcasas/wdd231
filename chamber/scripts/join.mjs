@@ -12,4 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     apiWeatherForecast();
     setFooterInfo();
     displayDetails();
+
+    const timestampField = document.getElementById("timestamp");
+    const now = new Date();
+    timestampField.value = now.toISOString();
 });
