@@ -1,4 +1,4 @@
-@media (min-width: 45em) {
+@media only screen and (min-width: 64rem) {
 
     /* HEADER */
     header {
@@ -79,7 +79,15 @@
         padding: 0.25rem;
     }
 
-    /*Directory end*/
+    /*************/
+
+    /* DISCOVER */
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /************/
 
     /*footer*/
     footer {
