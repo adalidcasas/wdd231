@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adalid Casas">
     <meta name="description" content="Divinas Accesorios">
-    <title>Divinas Accesorios</title>
+    <title>Divinas Accesorios - Store</title>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.onload=null;this.media='all';">
 
     <!-- scripts -->
-    <script type="module" src="scripts/index.mjs"></script>
+    <script type="module" src="scripts/store.mjs"></script>
 
     <!-- favicon -->
     <link rel="icon" href="images/favicon.ico">
@@ -57,38 +57,25 @@
             </div>
             <button id="menu" aria-label="menu-button"></button>
             <nav class="navigation">
-                <a href="index.html" class="active">Home</a>
-                <a href="store.html">Shop</a>
+                <a href="index.html">Home</a>
+                <a href="store.html" class="active">Shop</a>
                 <a href="about.html">About us</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
     <main>
-        <div class="hero">
-            <div class="hero-overlay"></div>
-            <picture>
-                <source srcset="images/hero-image.webp" media="(min-width: 32rem)">
-                <img src="images/hero-image-small.webp" alt="hero image" class="hero-image" loading="lazy">
-            </picture>
-            <div class="hero-content">
-                <p>Discover stylish and practical travel essentials at <span>Divinas Accesorios </span> your online
-                    store for organizers, elegant backpacks, and gift-worthy accessories.</p>
-                <button class="hero-button" id="call-to-action-button">Shop now!</button>
-            </div>
+        <div class="section-title">
+            <h1>Store</h1>
+            <p id="visitMessage"></p>
+            <p>Discover our exclusive collection of stylish and practical accessories designed to enhance your daily
+                life and travels. From handbags and backpacks to organizers and gift items, find the perfect piece to
+                match your style and needs. Shop now and make every day a little more special with Divinas Accesorios.
+            </p>
         </div>
-        <section class="products">
-            <div class="section-block">
-                <h2>Our Products</h2>
-            </div>
-            <div class="products-cards">
-            </div>
-            <dialog id="products-detail">
-            </dialog>
-        </section>
-        <section class="about">
-            <img src="" alt="">
-        </section>
+        <div class="products-cards"></div>
+        <dialog id="products-detail">
+        </dialog>
     </main>
 
     <footer>

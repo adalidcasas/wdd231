@@ -1,0 +1,347 @@
+:root {
+    /* Palette 1: Deep Violet & White */
+    --color-primary: #4B0082;
+    --color-on-primary: #FFFFFF;
+    --color-background: #FCE4EC;
+    --color-text: #1A1A1A;
+    --color-accent: #E6E6FA;
+    --color-highlight-dark: #3B0A52;
+    --width: 1050px;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    max-width: var(--width);
+    box-sizing: border-box;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size-adjust: 0.5;
+    font-optical-sizing: auto;
+    color: var(--color-text);
+}
+
+html {
+    font-display: swap;
+}
+
+/* START HEADER */
+.social-icons {
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    background-color: var(--color-primary);
+    margin: 0;
+    padding: .25rem;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.social-icons svg {
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.social-icons svg:hover {
+    cursor: pointer;
+    background-color: var(--color-highlight-dark);
+}
+
+.heading {
+    padding: 0.5rem;
+}
+
+.title img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    aspect-ratio: 4 / 2;
+    margin: 0;
+}
+
+.navigation {
+    display: block;
+}
+
+.navigation a {
+    border-bottom: 1px solid var(--color-primary);
+    display: none;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: large;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: all 0.5s ease-out, border-bottom 0.3s ease-in-out;
+}
+
+.navigation a.active {
+    border-bottom: 1px solid var(--color-highlight-dark);
+}
+
+.navigation a:hover {
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+}
+
+#menu {
+    border: none;
+    background: var(--color-on-primary);
+    color: var(--color-primary);
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    min-height: 3rem;
+    text-align: center;
+}
+
+#menu::before {
+    content: "☰";
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.open a {
+    display: block;
+}
+
+/* END HEADER */
+
+/* START HOME */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: x-large;
+    font-weight: lighter;
+    margin: 0;
+    min-height: 3rem;
+    color: var(--color-on-primary);
+}
+
+.hero-content p span {
+    color: var(--color-accent);
+    font-style: italic;
+}
+
+.hero-button {
+    padding: .75rem 4.5rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent);
+    font-size: large;
+    border-radius: .25rem;
+    transition: all .5s ease;
+}
+
+.hero-button a {
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-on-primary);
+}
+
+.section-block {
+    margin-top: 2rem;
+}
+
+.section-block h2 {
+    margin: 0;
+    font-size: x-large;
+    padding: .5rem;
+    background-color: var(--color-primary);
+    border-radius: .5rem .5rem 0 0;
+    color: var(--color-on-primary);
+    text-align: center;
+}
+
+
+/* START STORE */
+.section-title {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.section-title h1,
+.section-title p {
+    width: 75%;
+    text-align: center;
+    color: var(--color-on-primary);
+}
+
+.products-cards div {
+    margin: 1rem;
+    border: 1px solid var(--color-highlight-dark);
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: .5rem;
+    text-align: center;
+}
+
+.products-cards h2 {
+    margin-top: .5rem;
+    font-size: large;
+}
+
+.products-cards p {
+    font-size: medium;
+}
+
+.products-cards h2,
+.products-cards p {
+    margin-bottom: .5rem;
+}
+
+.products-cards img {
+    border: 1px solid var(--color-highlight-dark);
+    border-radius: .5rem;
+    width: 180px;
+    height: auto;
+}
+
+.products-cards button {
+    padding: 0.5rem 2rem;
+    margin: 0 1rem;
+    background-color: var(--color-highlight-dark);
+    color: var(--color-on-primary);
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    border-radius: .25rem;
+    transition: all 0.5s ease;
+}
+
+.products-cards button:hover {
+    cursor: pointer;
+    background-color: var(--color-background);
+    color: var(--color-highlight-dark);
+}
+
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 10rem;
+}
+
+::backdrop {
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.dialog-title {
+    display: flex;
+    justify-content: center;
+    padding: .9rem 0;
+    margin: 0 auto 1rem auto;
+    border-radius: .25rem;
+    background-color: var(--color-highlight-dark);
+    color: var(--color-on-primary);
+    font-size: large;
+}
+
+dialog h3,
+dialog p {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.dialog-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.closeModal {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    background-color: var(--color-bg-dark);
+    transition: background-color .5s ease;
+    border: none;
+}
+
+.closeModal:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-light);
+}
+
+/* END STORE */
+
+/* FOOTER */
+footer {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+footer h3,
+footer p,
+footer span,
+footer a {
+    color: var(--color-on-primary);
+    padding: 0.25rem 0;
+}
+
+.footer-author-info,
+.footer-contact-info {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact-info span {
+    font-weight: bold;
+}

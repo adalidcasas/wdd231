@@ -1,0 +1,23 @@
+@media only screen and (min-width: 64rem) {
+
+    /* START HEADER */
+    .title img {
+        max-width: 300px;
+    }
+
+    .navigation a {
+        padding: 0.5rem 2.5rem;
+        font-size: large;
+    }
+
+    /* END HEADER */
+
+    /* START STORE */
+    .products-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* END STORE */
+
+}
