@@ -75,7 +75,7 @@
     .contact-page {
         margin-top: 1rem;
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 2fr 1fr;
     }
 
     /* END CONTACT */
