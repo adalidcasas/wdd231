@@ -6,9 +6,15 @@ export function displayitems() {
 }
 
 export function displayFourItems() {
+    let maxItems = 4;
+    if (window.innerWidth <= 512) {
+        maxItems = 2;
+    } else if (window.innerWidth <= 1024) {
+        maxItems = 3;
+    }
     const randomProducts = products
         .sort(() => 0.5 - Math.random())
-        .slice(0, 4);
+        .slice(0, maxItems);
     selectProducts(randomProducts, showHere);
 }
 
