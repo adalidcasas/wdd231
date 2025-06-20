@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.onload=null;this.media='all';">
 
     <!-- scripts -->
-    <script type="module" src="scripts/contact.mjs"></script>
+    <script type="module" src="scripts/thankyou.mjs"></script>
 
     <!-- favicon -->
     <link rel="icon" href="images/favicon.ico">
@@ -66,43 +66,11 @@
     </header>
     <main>
         <div class="section-title">
-            <h1>Contact</h1>
-            <p id="visitMessage"></p>
-            <p>Have a question or want to say hello? Fill out the contact form below and we’ll get back to you as soon
-                as possible. You can also visit us at our store—just check the map for directions. We’d love to meet you
-                and help you find the perfect accessory at Divinas Accesorios!</p>
+            <h1>Thankyou</h1>
+            <p>We’ve received your request and will contact you soon.</p>
         </div>
-
-        <div class="contact-page ">
-            <form method="get" action="thankyou.html" class="forms">
-                <fieldset>
-                    <label for="firstname">First Name: </label>
-                    <input type="text" name="firstname" id="firstname" autocomplete="given-name" required>
-
-                    <label for="lastname">Last Name: </label>
-                    <input type="text" name="lastname" id="lastname" autocomplete="family-name" required>
-
-                    <label for="emailaddress">Email Address: </label>
-                    <input type="email" name="emailaddress" id="emailaddress" autocomplete="email" required>
-
-                    <label for="mobilephone">Mobile Phone Number: </label>
-                    <input type="tel" name="mobilephone" id="mobilephone" autocomplete="mobile" required>
-
-                    <label for="comments">Comments:</label>
-                    <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
-                    <input type="hidden" name="timestamp" id="timestamp">
-
-                </fieldset>
-                <input type="submit" name="submitbutton" id="submitbutton" value="Submit">
-            </form>
-            <div class="map-container">
-                <h2>Location store</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.546687657963!2d-68.13307979999999!3d-16.498475799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2100013a65dd%3A0xb4806aa6415d95a7!2sDivinas%20Accesorios!5e0!3m2!1sen!2sbo!4v1750377382281!5m2!1sen!2sbo"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
+        <div class="registration-summary"></div>
+        <a href="index.html" class="return-button"> Return</a>
     </main>
 
     <footer>
