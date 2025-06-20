@@ -317,6 +317,70 @@ dialog p {
 
 /* END STORE */
 
+
+/* CONTACT PAGE */
+.forms {
+    background-color: var(--color-background);
+    border-radius: .5rem;
+    padding: 0 1rem;
+    width: 90%;
+}
+
+.forms fieldset {
+    margin: .5rem auto;
+    border: none;
+    padding: .5rem 1rem 2rem .5rem;
+}
+
+.forms label,
+.forms p {
+    display: block;
+    padding-top: 1rem;
+    color: var(--color-text-dark);
+    font-size: .9rem;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.forms input[type="text"],
+.forms input[type="email"],
+.forms input[type="tel"],
+.forms textarea {
+    background-color: var(--color-on-primary);
+    display: block;
+    border: solid 1px var(--color-highlight-dark);
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--color-text);
+    width: 100%;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.forms input[type="submit"] {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
+    background-color: var(--color-highlight-dark);
+    color: var(--color-on-primary);
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    width: 60%;
+    border-radius: .25rem;
+    transition: background-color 0.3s ease;
+}
+
+.forms input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--color-on-primary);
+    color: var(--color-highlight-dark);
+}
+
+/* END CONTACT */
+
 /* FOOTER */
 footer {
     background-color: var(--color-primary);

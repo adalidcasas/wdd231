@@ -71,6 +71,15 @@
 
     /* END STORE */
 
+    /* START CONTACT */
+    .contact-page {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    /* END CONTACT */
+
     /* START FOOTER */
 
     footer {
