@@ -81,6 +81,13 @@
 
     /* END CONTACT */
 
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin: 1rem 0 1rem 0;
+    }
+
     /* START FOOTER */
 
     footer {
